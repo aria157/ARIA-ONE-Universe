@@ -23,7 +23,37 @@ export default function Home() {
               Explore
             </a>
           </div>
+          
+          {/* Universe Links */}
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 md:gap-6">
+            <div className="rounded-2xl border-2 border-rose-200 bg-gradient-to-br from-pink-50 to-rose-50 p-6 shadow-md transition-all hover:shadow-xl dark:border-rose-800 dark:from-pink-900/20 dark:to-rose-900/20">
+              <h3 className="mb-2 text-2xl font-bold text-rose-700 dark:text-rose-300">KikiX</h3>
+              <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">Experience the Future of Innovation</p>
+              <a
+                href="https://kikix.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full bg-rose-600 px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-rose-700"
+              >
+                Visit KikiX →
+              </a>
+            </div>
+            
+            <div className="rounded-2xl border-2 border-teal-200 bg-gradient-to-br from-cyan-50 to-teal-50 p-6 shadow-md transition-all hover:shadow-xl dark:border-teal-800 dark:from-teal-900/20 dark:to-emerald-900/20">
+              <h3 className="mb-2 text-2xl font-bold text-teal-700 dark:text-teal-300">AURX FreQ</h3>
+              <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">Tune into the Frequency of Tomorrow</p>
+              <a
+                href="https://aurx-freq.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full bg-teal-600 px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-teal-700"
+              >
+                Visit AURX FreQ →
+              </a>
+            </div>
+          </div>
         </div>
+        
         <div className="mt-16 text-sm text-gray-500 dark:text-gray-400">
           Part of the ARIA ONE Universe
         </div>

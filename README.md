@@ -92,13 +92,27 @@ ARIA-ONE-Universe/
 
 ## 🌐 Deployment
 
-This project is configured for deployment on Vercel. Each app can be deployed individually or as part of the monorepo.
+This project is configured for deployment on Vercel.
 
-### Vercel Deployment
+### Main Deployment
 
-The repository is set up with `vercel.json` for easy deployment. Simply connect your GitHub repository to Vercel, and it will automatically deploy all three applications.
+The **ARIA ONE** app serves as the main landing page for the ARIA ONE Universe and includes links to the other projects. Simply connect this repository to Vercel, and it will automatically deploy the ARIA ONE app.
 
 Visit the live site at: [https://aria-one-universe.vercel.app](https://aria-one-universe.vercel.app)
+
+### Individual App Deployments
+
+Each app can also be deployed individually to its own Vercel project:
+
+1. **ARIA ONE**: Deploy from `apps/aria-one`
+2. **KikiX**: Deploy from `apps/kikix` → [kikix.vercel.app](https://kikix.vercel.app)
+3. **AURX FreQ**: Deploy from `apps/aurx-freq` → [aurx-freq.vercel.app](https://aurx-freq.vercel.app)
+
+To deploy an individual app:
+1. Create a new project in Vercel
+2. Set the **Root Directory** to the app's folder (e.g., `apps/kikix`)
+3. Vercel will automatically detect the Next.js framework
+4. Deploy!
 
 ## 🛠 Tech Stack
 

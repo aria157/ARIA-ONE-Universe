@@ -1,32 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "version": 2,
-  "builds": [
-    {
-      "src": "apps/aria-one/package.json",
-      "use": "@vercel/next"
-    },
-    {
-      "src": "apps/kikix/package.json",
-      "use": "@vercel/next"
-    },
-    {
-      "src": "apps/aurx-freq/package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/aria-one/(.*)",
-      "dest": "apps/aria-one/$1"
-    },
-    {
-      "src": "/kikix/(.*)",
-      "dest": "apps/kikix/$1"
-    },
-    {
-      "src": "/aurx-freq/(.*)",
-      "dest": "apps/aurx-freq/$1"
-    }
-  ]
+  "buildCommand": "cd apps/aria-one && npm run build",
+  "outputDirectory": "apps/aria-one/.next",
+  "framework": "nextjs"
 }
