@@ -48,8 +48,10 @@ npm run dev:aurx-freq
 
 The apps will be available at:
 - ARIA ONE: http://localhost:3000
-- KikiX: http://localhost:3000
-- AURX FreQ: http://localhost:3000
+- KikiX: http://localhost:3001
+- AURX FreQ: http://localhost:3002
+
+**Note:** Each app runs on a different port to avoid conflicts. Configure the ports in each app's `package.json` dev script if needed.
 
 ### Building
 
@@ -100,9 +102,9 @@ Visit the live site at: [https://aria-one-universe.vercel.app](https://aria-one-
 
 ## 🛠 Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS
+- **Styling**: Tailwind CSS 4
 - **Deployment**: Vercel
 
 ## 📄 License
