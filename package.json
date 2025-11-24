@@ -1,0 +1,30 @@
+{
+  "name": "aria-one-universe",
+  "version": "1.0.0",
+  "description": "ARIA ONE Universe: ARIA ONE, KikiX, AURX FreQ websites",
+  "private": true,
+  "scripts": {
+    "dev:aria-one": "cd apps/aria-one && npm run dev",
+    "dev:kikix": "cd apps/kikix && npm run dev",
+    "dev:aurx-freq": "cd apps/aurx-freq && npm run dev",
+    "build:aria-one": "cd apps/aria-one && npm run build",
+    "build:kikix": "cd apps/kikix && npm run build",
+    "build:aurx-freq": "cd apps/aurx-freq && npm run build",
+    "build:all": "npm run build:aria-one && npm run build:kikix && npm run build:aurx-freq",
+    "start:aria-one": "cd apps/aria-one && npm run start",
+    "start:kikix": "cd apps/kikix && npm run start",
+    "start:aurx-freq": "cd apps/aurx-freq && npm run start",
+    "lint:aria-one": "cd apps/aria-one && npm run lint",
+    "lint:kikix": "cd apps/kikix && npm run lint",
+    "lint:aurx-freq": "cd apps/aurx-freq && npm run lint",
+    "lint:all": "npm run lint:aria-one && npm run lint:kikix && npm run lint:aurx-freq"
+  },
+  "keywords": [
+    "aria-one",
+    "kikix",
+    "aurx-freq",
+    "universe"
+  ],
+  "author": "aria157",
+  "license": "MIT"
+}
