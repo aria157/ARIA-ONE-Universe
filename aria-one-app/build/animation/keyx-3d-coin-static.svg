@@ -1,0 +1,66 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="coinGlow" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#fff" />
+      <stop offset="50%" stop-color="#FFF700" />
+      <stop offset="80%" stop-color="#62f7fe" />
+      <stop offset="100%" stop-color="#ff8ed6" />
+    </radialGradient>
+    <linearGradient id="metallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="50%" stop-color="#FFF700" />
+      <stop offset="100%" stop-color="#FFB700" />
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dx="0" dy="10" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Shadow -->
+  <ellipse cx="256" cy="420" rx="180" ry="30" fill="#000" opacity="0.3"/>
+  
+  <!-- Coin body (3D perspective) -->
+  <ellipse cx="256" cy="256" rx="200" ry="200" fill="url(#coinGlow)" filter="url(#shadow)"/>
+  
+  <!-- Outer rim (metallic edge) -->
+  <circle cx="256" cy="256" r="200" stroke="url(#metallic)" stroke-width="12" fill="none"/>
+  <circle cx="256" cy="256" r="188" stroke="#FFF700" stroke-width="4" fill="none" opacity="0.6"/>
+  
+  <!-- Inner platform -->
+  <circle cx="256" cy="256" r="160" fill="#050510" opacity="0.7"/>
+  <circle cx="256" cy="256" r="160" stroke="#62f7fe" stroke-width="2" opacity="0.5"/>
+  
+  <!-- KeyX Triangle (embossed effect) -->
+  <polygon points="256,170 340,340 172,340" fill="#333" opacity="0.3" transform="translate(5,5)"/>
+  <polygon points="256,170 340,340 172,340" fill="url(#metallic)" stroke="#fff" stroke-width="6"/>
+  
+  <!-- Horizontal bar (A motif) -->
+  <line x1="210" y1="250" x2="302" y2="250" stroke="#62f7fe" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Digital X circuit -->
+  <line x1="190" y1="310" x2="240" y2="360" stroke="#62f7fe" stroke-width="6" stroke-linecap="round"/>
+  <line x1="240" y1="310" x2="190" y2="360" stroke="#ff8ed6" stroke-width="6" stroke-linecap="round"/>
+  
+  <line x1="272" y1="310" x2="322" y2="360" stroke="#62f7fe" stroke-width="6" stroke-linecap="round"/>
+  <line x1="322" y1="310" x2="272" y2="360" stroke="#ff8ed6" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Highlight glint -->
+  <circle cx="180" cy="180" r="30" fill="#fff" opacity="0.6"/>
+  <circle cx="190" cy="190" r="15" fill="#fff" opacity="0.8"/>
+  
+  <!-- Text embossing -->
+  <text x="256" y="400" text-anchor="middle" fill="#FFF700" font-size="36" font-family="Arial Black, sans-serif" font-weight="bold" letter-spacing="4">
+    KEYX
+  </text>
+  <text x="256" y="402" text-anchor="middle" fill="#000" font-size="36" font-family="Arial Black, sans-serif" font-weight="bold" letter-spacing="4" opacity="0.3">
+    KEYX
+  </text>
+</svg>

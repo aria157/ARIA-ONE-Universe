@@ -1,0 +1,461 @@
+/* Prometheus font - add font files to public/fonts/ when ready */
+/* @font-face {
+  font-family: "Prometheus";
+  src: url("/fonts/Prometheus.woff2") format("woff2"),
+       url("/fonts/Prometheus.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} */
+
+/* Global reset + base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 300;
+}
+
+/* ========= ENTER SCREEN LAYOUT ========= */
+
+.aria-enter-body {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.aria-enter {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+}
+
+/* Top "CLAIM YOUR SPACE" */
+.aria-enter-header {
+  text-align: center;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.aria-enter-tagline {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.35rem;
+}
+
+/* Center section */
+.aria-enter-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+/* Logo */
+.aria-logo-mark {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aria-logo-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.aria-logo-circle {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.7;
+}
+
+.aria-logo-triangle {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.7;
+  stroke-linejoin: miter;
+}
+
+/* Wordmark */
+.aria-enter-wordmark {
+  text-align: center;
+  line-height: 1.3;
+}
+
+.aria-enter-title {
+  font-size: 1.9rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.aria-enter-official-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Symbol behind OFFICIAL */
+.aria-official-symbol {
+  position: absolute;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 1.7em;
+  border-radius: 999px;
+  border: 1px solid #000;
+  opacity: 0.13;
+}
+
+/* OFFICIAL text */
+.aria-enter-official {
+  position: relative;
+  padding: 0.2rem 0.9rem;
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+/* ENTER button */
+.aria-enter-button {
+  border: 1px solid #000;
+  background: transparent;
+  padding: 0.65rem 1.8rem 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.05rem;
+  border-radius: 999px;
+  outline: none;
+  transition:
+    transform 160ms ease-out,
+    box-shadow 160ms ease-out,
+    background 160ms ease-out,
+    color 160ms ease-out;
+}
+
+.aria-enter-infinity {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.aria-enter-label {
+  font-size: 0.7rem;
+}
+
+/* Footer */
+.aria-enter-footer {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  margin-top: 1.5rem;
+}
+
+/* ========= ANIMATIONS ========= */
+
+/* Page fade-in */
+.aria-enter {
+  opacity: 0;
+  animation: aria-fade-in 700ms ease-out forwards;
+}
+
+@keyframes aria-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Infinity subtle pulse */
+.aria-enter-infinity {
+  animation: aria-infinity-pulse 2100ms ease-in-out infinite;
+}
+
+@keyframes aria-infinity-pulse {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-1px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+}
+
+/* Button hover */
+.aria-enter-button:hover {
+  background: #000;
+  color: #fff;
+  box-shadow: 0 0 0 1px #000 inset;
+  transform: translateY(-1px);
+}
+
+/* ========= INNER APP HEADER ========= */
+
+.aria-app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.75rem;
+  border-bottom: 1px solid #000;
+  background: #ffffff;
+}
+
+.aria-app-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.aria-app-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.aria-app-text {
+  line-height: 1.1;
+}
+
+.aria-app-title {
+  font-size: 1rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.aria-app-sub {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Nav */
+.aria-app-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.aria-nav-link {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.aria-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 160ms ease-out;
+}
+
+.aria-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Contract Info Card */
+.contract-card {
+  background: #f9f9f9;
+  border: 1px solid #000;
+  padding: 2rem;
+  border-radius: 4px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.contract-title {
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contract-info {
+  margin-bottom: 1rem;
+}
+
+.contract-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.contract-value {
+  font-family: monospace;
+  font-size: 0.9rem;
+  word-break: break-all;
+  background: #fff;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.contract-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  transition: transform 160ms ease-out;
+}
+
+.contract-link:hover {
+  transform: translateY(-2px);
+}
+
+/* AURX FreQ Section */
+.aurx-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.aurx-logo {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* KEYX Showcase Section */
+.keyx-showcase {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+  text-align: center;
+}
+
+.showcase-title {
+  font-size: 2rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.keyx-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.keyx-logo-gradient {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+  transition: transform 300ms ease;
+}
+
+.keyx-logo-gradient:hover {
+  transform: scale(1.05);
+}
+
+.keyx-logo-dark {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  transition: transform 300ms ease;
+}
+
+.keyx-logo-dark:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .aria-enter {
+    padding-inline: 1.25rem;
+  }
+
+  .aria-enter-title {
+    font-size: 1.45rem;
+    letter-spacing: 0.24em;
+  }
+
+  .aria-enter-official {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+  }
+
+  .aria-enter-tagline {
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+  }
+
+  .contract-card {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .aria-app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .aria-app-nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 0.65rem;
+  }
+}

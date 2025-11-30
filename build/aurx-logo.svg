@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Light gray A with circle and dot -->
+  <g opacity="0.3">
+    <path d="M 80 450 L 140 250 L 200 450" stroke="#000" fill="none" stroke-width="3"/>
+    <path d="M 100 380 L 180 380" stroke="#000" stroke-width="3"/>
+    <circle cx="140" cy="380" r="40" stroke="#000" fill="none" stroke-width="2"/>
+    <circle cx="140" cy="440" r="3" fill="#000"/>
+  </g>
+  
+  <!-- Black A with circle and dot -->
+  <g>
+    <path d="M 220 450 L 280 250 L 340 450" stroke="#000" fill="none" stroke-width="4"/>
+    <path d="M 240 380 L 320 380" stroke="#000" stroke-width="4"/>
+    <circle cx="280" cy="380" r="40" stroke="#000" fill="none" stroke-width="3"/>
+    <circle cx="280" cy="440" r="4" fill="#000"/>
+  </g>
+  
+  <!-- AURX FreQ text -->
+  <text x="380" y="350" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#000">AURX</text>
+  <text x="380" y="420" font-family="Arial, sans-serif" font-size="56" fill="#000">FreQ</text>
+</svg>

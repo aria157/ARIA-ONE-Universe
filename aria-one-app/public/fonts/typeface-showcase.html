@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARIA ONE TYPEFACE - Showcase</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: #050510;
+      color: #FDFDFD;
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 40px;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #FFF700, #62f7fe, #ff8ed6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .subtitle {
+      text-align: center;
+      color: #62f7fe;
+      margin-bottom: 60px;
+      font-size: 18px;
+    }
+    
+    .letter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+    
+    .letter-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 247, 0, 0.3);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .letter-card:hover {
+      border-color: #FFF700;
+      box-shadow: 0 0 20px rgba(255, 247, 0, 0.4);
+      transform: translateY(-5px);
+    }
+    
+    .letter-card img {
+      width: 80px;
+      height: 80px;
+      filter: invert(1);
+    }
+    
+    .letter-card .label {
+      margin-top: 10px;
+      color: #62f7fe;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    
+    .section-title {
+      font-size: 32px;
+      margin: 40px 0 20px;
+      color: #FFF700;
+    }
+    
+    .example-text {
+      font-size: 64px;
+      text-align: center;
+      margin: 40px 0;
+      line-height: 1.2;
+    }
+    
+    .neon-yellow {
+      color: #FFF700;
+      text-shadow: 0 0 20px rgba(255, 247, 0, 0.6);
+    }
+    
+    .aqua {
+      color: #62f7fe;
+      text-shadow: 0 0 20px rgba(98, 247, 254, 0.6);
+    }
+    
+    .pink {
+      color: #ff8ed6;
+      text-shadow: 0 0 20px rgba(255, 142, 214, 0.6);
+    }
+    
+    .gradient {
+      background: linear-gradient(135deg, #FFF700, #62f7fe, #ff8ed6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .usage-example {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #FFF700;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+    
+    .usage-example code {
+      display: block;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      border-radius: 6px;
+      color: #62f7fe;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+    
+    .color-palette {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    
+    .color-swatch {
+      width: 120px;
+      text-align: center;
+    }
+    
+    .color-box {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 2px solid rgba(255, 247, 0, 0.3);
+      color: #62f7fe;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌟 ARIA ONE TYPEFACE</h1>
+    <p class="subtitle">The Soul of ARIA ONE Universe in Pure Geometric Form</p>
+    
+    <h2 class="section-title">Alphabet (A-Z)</h2>
+    <div class="letter-grid" id="alphabet-grid">
+      <!-- Letters A-Z will be inserted here by JavaScript -->
+    </div>
+    
+    <h2 class="section-title">Numbers (0-9)</h2>
+    <div class="letter-grid" id="numbers-grid">
+      <!-- Numbers 0-9 will be inserted here by JavaScript -->
+    </div>
+    
+    <h2 class="section-title">Color System</h2>
+    <div class="color-palette">
+      <div class="color-swatch">
+        <div class="color-box" style="background: #FFF700;"></div>
+        <div>Neon Yellow</div>
+        <code>#FFF700</code>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background: #62f7fe;"></div>
+        <div>Aqua</div>
+        <code>#62f7fe</code>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background: #ff8ed6;"></div>
+        <div>Pink</div>
+        <code>#ff8ed6</code>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background: #050510;"></div>
+        <div>Deep Space</div>
+        <code>#050510</code>
+      </div>
+    </div>
+    
+    <h2 class="section-title">Usage Examples</h2>
+    
+    <div class="usage-example">
+      <h3>HTML - Individual SVG Letters</h3>
+      <code>&lt;img src="/fonts/letters/A-neon.svg" alt="A" class="letter" /&gt;</code>
+    </div>
+    
+    <div class="usage-example">
+      <h3>React - Import SVG Component</h3>
+      <code>import AriaA from '../public/fonts/letters/A.svg';
+      
+&lt;img src={AriaA} alt="A" className="letter" /&gt;</code>
+    </div>
+    
+    <div class="usage-example">
+      <h3>CSS - Web Font (After Conversion)</h3>
+      <code>@font-face {
+  font-family: 'ARIA ONE';
+  src: url('/fonts/ariaone-font.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'ARIA ONE', sans-serif;
+  color: #FFF700;
+}</code>
+    </div>
+    
+    <h2 class="section-title">Live Demonstration</h2>
+    <div class="example-text neon-yellow">ARIA ONE</div>
+    <div class="example-text aqua">KEYX 2025</div>
+    <div class="example-text pink">VERIFIED</div>
+    <div class="example-text gradient">UNIVERSE</div>
+    
+    <div class="footer">
+      <p><strong>ARIA ONE TYPEFACE v1.0</strong></p>
+      <p>Complete A-Z, 0-9, Punctuation & Symbols</p>
+      <p>© 2025 ARIA ONE Universe</p>
+      <p style="margin-top: 20px; color: #FFF700;">Ready for Web3 🚀</p>
+    </div>
+  </div>
+  
+  <script>
+    // Generate alphabet grid
+    const alphabetGrid = document.getElementById('alphabet-grid');
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    
+    for (let letter of alphabet) {
+      const card = document.createElement('div');
+      card.className = 'letter-card';
+      card.innerHTML = `
+        <div style="font-size: 64px; font-weight: bold;">${letter}</div>
+        <div class="label">${letter}</div>
+      `;
+      alphabetGrid.appendChild(card);
+    }
+    
+    // Generate numbers grid
+    const numbersGrid = document.getElementById('numbers-grid');
+    const numbers = '0123456789';
+    
+    for (let num of numbers) {
+      const card = document.createElement('div');
+      card.className = 'letter-card';
+      card.innerHTML = `
+        <div style="font-size: 64px; font-weight: bold;">${num}</div>
+        <div class="label">${num}</div>
+      `;
+      numbersGrid.appendChild(card);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* ARIA KEYX — Brand Color Palette */
+/* Copy-paste ready CSS variables for all projects */
+
+:root {
+  /* Primary KEYX Colors */
+  --keyx-yellow: #FFF700;
+  --keyx-neon: #ffee00;
+  --keyx-gold: #FFD700;
+  --keyx-gold-accent: #FFE066;
+  --keyx-orange: #FFA500;
+
+  /* Pastel Plasma Accents (Kiki.x Inspired) */
+  --keyx-pastel-lime: #CFFFB3;
+  --keyx-pastel-pink: #FFD2F0;
+  --keyx-pastel-aqua: #CCFCFF;
+  --keyx-pastel-yellow: #FFFFCC;
+
+  /* Base Colors */
+  --keyx-black: #000000;
+  --keyx-dark: #151515;
+  --keyx-dark-gray: #1a1a1a;
+  --keyx-gray: #333333;
+  --keyx-light-gray: #aaaaaa;
+  --keyx-white: #FFFFFF;
+
+  /* Glow Effects */
+  --keyx-glow: 0 0 20px #fff700, 0 0 40px #fff70066;
+  --keyx-gold-glow: 0 0 30px rgba(255, 215, 0, 0.6);
+  --keyx-neon-glow: 0 0 40px rgba(255, 238, 0, 0.8);
+  --keyx-soft-glow: 0 4px 20px rgba(255, 215, 0, 0.4);
+
+  /* Gradients */
+  --keyx-gradient-primary: linear-gradient(135deg, #FFD700, #FFF, #FFD700);
+  --keyx-gradient-gold: linear-gradient(135deg, #FFD700, #FFA500);
+  --keyx-gradient-plasma: linear-gradient(135deg, #CFFFB3, #FFD2F0, #CCFCFF);
+  --keyx-gradient-dark: linear-gradient(180deg, #000000, #151515);
+
+  /* Backgrounds */
+  --keyx-bg-primary: rgba(0, 0, 0, 0.9);
+  --keyx-bg-card: rgba(255, 255, 255, 0.05);
+  --keyx-bg-card-hover: rgba(255, 255, 255, 0.08);
+  --keyx-bg-glass: rgba(0, 0, 0, 0.8);
+  
+  /* Borders */
+  --keyx-border-primary: 1px solid rgba(255, 215, 0, 0.3);
+  --keyx-border-glow: 1px solid #FFD700;
+  --keyx-border-neon: 2px solid #ffee00;
+
+  /* Animation Timings */
+  --keyx-transition-fast: 0.2s ease;
+  --keyx-transition-normal: 0.3s ease;
+  --keyx-transition-slow: 0.5s ease;
+}
+
+/* Utility Classes */
+
+.keyx-text-glow {
+  text-shadow: var(--keyx-glow);
+}
+
+.keyx-text-gold {
+  color: var(--keyx-gold);
+}
+
+.keyx-text-gradient {
+  background: var(--keyx-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.keyx-card {
+  background: var(--keyx-bg-card);
+  border: var(--keyx-border-primary);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: var(--keyx-transition-normal);
+}
+
+.keyx-card:hover {
+  background: var(--keyx-bg-card-hover);
+  border: var(--keyx-border-glow);
+  box-shadow: var(--keyx-gold-glow);
+  transform: translateY(-5px);
+}
+
+.keyx-button-primary {
+  background: var(--keyx-gradient-gold);
+  color: var(--keyx-black);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--keyx-soft-glow);
+  transition: var(--keyx-transition-normal);
+}
+
+.keyx-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--keyx-gold-glow);
+}
+
+.keyx-icon-glow {
+  filter: drop-shadow(var(--keyx-glow));
+}
+
+/* Animations */
+
+@keyframes keyx-pulse {
+  0%, 100% { opacity: 1; text-shadow: var(--keyx-glow); }
+  50% { opacity: 0.7; text-shadow: 0 0 60px rgba(255, 238, 0, 1); }
+}
+
+@keyframes keyx-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes keyx-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.keyx-pulse {
+  animation: keyx-pulse 2s ease-in-out infinite;
+}
+
+.keyx-float {
+  animation: keyx-float 6s ease-in-out infinite;
+}
+
+.keyx-shimmer {
+  animation: keyx-shimmer 3s ease-in-out infinite;
+  background-size: 200% 200%;
+}

@@ -1,0 +1,53 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow" cx="0" cy="0" r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(256 256) rotate(90) scale(256)">
+      <stop offset="0" stop-color="#FFB6E6"/>
+      <stop offset="0.5" stop-color="#89F2FF"/>
+      <stop offset="1" stop-color="#050510"/>
+    </radialGradient>
+
+    <linearGradient id="ringGrad" x1="120" y1="120" x2="392" y2="392" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F9FF3B"/>
+      <stop offset="0.5" stop-color="#FFB6E6"/>
+      <stop offset="1" stop-color="#89F2FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGlow)"/>
+
+  <!-- Ring -->
+  <circle cx="256" cy="256" r="176" stroke="url(#ringGrad)" stroke-width="8"/>
+
+  <!-- Inner coin -->
+  <circle cx="256" cy="256" r="132" fill="#050510" opacity="0.75"/>
+  <circle cx="256" cy="256" r="132" stroke="#FDFDFD" stroke-width="2" opacity="0.3"/>
+
+  <!-- Triangle "A / Key" -->
+  <path d="M256 144L170 320H196L228 254H284L316 320H342L256 144Z"
+        fill="none"
+        stroke="#FDFDFD"
+        stroke-width="8"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Horizontal bar -->
+  <line x1="224" y1="236" x2="288" y2="236"
+        stroke="#F9FF3B"
+        stroke-width="8"
+        stroke-linecap="round"/>
+
+  <!-- Subtle inner glow strokes -->
+  <path d="M256 144L170 320"
+        stroke="#FFB6E6"
+        stroke-width="3"
+        stroke-linecap="round"
+        opacity="0.7"/>
+  <path d="M256 144L342 320"
+        stroke="#89F2FF"
+        stroke-width="3"
+        stroke-linecap="round"
+        opacity="0.7"/>
+</svg>

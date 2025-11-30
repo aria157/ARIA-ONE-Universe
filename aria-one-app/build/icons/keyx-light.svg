@@ -1,0 +1,29 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="128" fill="#FFFFFF"/>
+
+  <!-- Soft shadow coin -->
+  <circle cx="256" cy="256" r="160" fill="#F5F5F8"/>
+  <circle cx="256" cy="256" r="160" stroke="#E4E4EF" stroke-width="4"/>
+
+  <!-- Neon ring -->
+  <circle cx="256" cy="256" r="136" stroke="#F9FF3B" stroke-width="6"/>
+  <circle cx="256" cy="256" r="128" stroke="#89F2FF" stroke-width="2" opacity="0.8"/>
+
+  <!-- Triangle "A / Key" -->
+  <path d="M256 148L176 316H196L226 256H286L316 316H336L256 148Z"
+        fill="none"
+        stroke="#050510"
+        stroke-width="9"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Horizontal bar -->
+  <line x1="224" y1="238" x2="288" y2="238"
+        stroke="#F9FF3B"
+        stroke-width="9"
+        stroke-linecap="round"/>
+
+  <!-- KeyX spark (top) -->
+  <circle cx="256" cy="136" r="8" fill="#F9FF3B"/>
+</svg>
