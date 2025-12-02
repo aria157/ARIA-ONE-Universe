@@ -79,7 +79,7 @@ function AriaOneApp() {
       <div className="keyx-showcase">
         <h2 className="showcase-title">ARIA KEYX</h2>
         <div className="keyx-logos">
-          <img src="/icons/keyx-token-512.png" alt="KEYX Token" className="keyx-logo-coin" />
+          <img src="/aria-keyx-gold.svg" alt="KEYX Gold Coin" className="keyx-logo-coin keyx-spin" />
         </div>
       </div>
 

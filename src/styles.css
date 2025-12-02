@@ -575,20 +575,25 @@ body::after {
   height: auto;
   filter: drop-shadow(0 8px 24px rgba(255, 215, 0, 0.3));
   transition: all 400ms ease;
-  animation: float 3s ease-in-out infinite;
 }
 
 .keyx-logo-coin:hover {
-  transform: scale(1.08) rotate(5deg);
+  transform: scale(1.08);
   filter: drop-shadow(0 12px 32px rgba(255, 215, 0, 0.5));
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+/* 3D Spinning Animation */
+.keyx-spin {
+  animation: spin3d 4s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes spin3d {
+  from { 
+    transform: rotateY(0deg);
   }
-  50% {
-    transform: translateY(-10px);
+  to { 
+    transform: rotateY(360deg);
   }
 }
 
