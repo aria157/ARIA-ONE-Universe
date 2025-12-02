@@ -117,7 +117,7 @@ function AriaOneApp() {
         </a>
 
         <a 
-          href="/whitepaper.md"
+          href="/whitepaper.html"
           target="_blank"
           rel="noopener noreferrer"
           className="contract-link"
