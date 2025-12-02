@@ -48,7 +48,7 @@ function AriaOneApp() {
   }
 
   return (
-    <div>
+    <div className="aria-keyx-universe">
       <header className="aria-app-header">
         <div className="aria-app-brand">
           <div className="aria-app-logo">
