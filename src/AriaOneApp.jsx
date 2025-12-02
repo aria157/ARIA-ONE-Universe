@@ -115,6 +115,16 @@ function AriaOneApp() {
         >
           View on BaseScan
         </a>
+
+        <a 
+          href="/whitepaper.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contract-link"
+          style={{ marginTop: '10px' }}
+        >
+          Read Whitepaper
+        </a>
       </div>
     </div>
   );
