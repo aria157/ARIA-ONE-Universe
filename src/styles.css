@@ -1,3 +1,6 @@
+/* Import Orbitron font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;600;700&display=swap');
+
 /* Prometheus font - add font files to public/fonts/ when ready */
 /* @font-face {
   font-family: "Prometheus";
@@ -22,7 +25,7 @@ html, body {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Orbitron', 'Rajdhani', 'Exo 2', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   background: #ffffff;
   color: #000000;
   font-weight: 300;
@@ -378,11 +381,12 @@ body {
 }
 
 .showcase-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   margin-bottom: 3rem;
-  font-weight: 300;
+  font-weight: 900;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .keyx-logos {
@@ -393,6 +397,29 @@ body {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.keyx-logo-coin {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(255, 215, 0, 0.3));
+  transition: all 400ms ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.keyx-logo-coin:hover {
+  transform: scale(1.08) rotate(5deg);
+  filter: drop-shadow(0 12px 32px rgba(255, 215, 0, 0.5));
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .keyx-logo-gradient {
