@@ -1,0 +1,54 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="badgeGlow" cx="0" cy="0" r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(160 160) rotate(90) scale(160)">
+      <stop offset="0" stop-color="#89F2FF" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#FFB6E6" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#050510" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outer badge circle -->
+  <circle cx="160" cy="160" r="150" fill="#050510"/>
+  <circle cx="160" cy="160" r="150" stroke="#F9FF3B" stroke-width="4" opacity="0.9"/>
+
+  <!-- Inner glow -->
+  <circle cx="160" cy="160" r="120" fill="url(#badgeGlow)"/>
+
+  <!-- Inner outline -->
+  <circle cx="160" cy="160" r="118" stroke="#FDFDFD" stroke-width="2" opacity="0.6"/>
+
+  <!-- KeyX mark -->
+  <path d="M160 84L104 204H120L138 168H182L200 204H216L160 84Z"
+        fill="none"
+        stroke="#FDFDFD"
+        stroke-width="7"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <line x1="138" y1="154" x2="182" y2="154"
+        stroke="#F9FF3B"
+        stroke-width="7"
+        stroke-linecap="round"/>
+
+  <!-- Verified tick (bottom-right) -->
+  <circle cx="228" cy="224" r="40" fill="#050510"/>
+  <circle cx="228" cy="224" r="40" stroke="#F9FF3B" stroke-width="4"/>
+
+  <path d="M214 225L223 234L243 214"
+        stroke="#F9FF3B"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Label -->
+  <text x="50%" y="252"
+        text-anchor="middle"
+        fill="#FDFDFD"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="14"
+        letter-spacing="3">
+    VERIFIED KEYX ID
+  </text>
+</svg>

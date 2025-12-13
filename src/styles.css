@@ -1,0 +1,663 @@
+/* Import Orbitron font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;600;700&display=swap');
+
+/* Prometheus font - add font files to public/fonts/ when ready */
+/* @font-face {
+  font-family: "Prometheus";
+  src: url("/fonts/Prometheus.woff2") format("woff2"),
+       url("/fonts/Prometheus.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} */
+
+/* Global reset + base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Orbitron', 'Rajdhani', 'Exo 2', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: #fafafa;
+  color: #000000;
+  font-weight: 300;
+  position: relative;
+}
+
+/* Subtle background gradient - minimal */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(245, 245, 247, 0.98) 50%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  z-index: -2;
+}
+
+/* Remove dark theme sparkles for entrance */
+body::after {
+  display: none;
+}
+
+/* KEYX Universe - Prismatic Theme */
+.aria-keyx-universe {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #ffffff;
+  position: relative;
+}
+
+.aria-keyx-universe::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 40% 70%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(255, 105, 180, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 60% 40%, rgba(50, 205, 50, 0.08) 0%, transparent 50%);
+  filter: blur(80px);
+  z-index: -2;
+  animation: prismatic-shift 20s ease-in-out infinite;
+}
+
+.aria-keyx-universe::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 60% 70%, rgba(255, 215, 0, 0.6), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(138, 43, 226, 0.5), transparent),
+    radial-gradient(1px 1px at 80% 10%, rgba(0, 255, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 90% 60%, rgba(255, 105, 180, 0.5), transparent);
+  background-size: 300% 300%;
+  background-position: 0% 0%;
+  z-index: -1;
+  opacity: 0.4;
+  animation: sparkle-drift 15s ease-in-out infinite;
+}
+
+@keyframes prismatic-shift {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes sparkle-drift {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+/* ========= ENTER SCREEN LAYOUT ========= */
+
+.aria-enter-body {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.aria-enter {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+}
+
+/* Top "CLAIM YOUR SPACE" */
+.aria-enter-header {
+  text-align: center;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: #000;
+  font-weight: 400;
+}
+
+.aria-enter-tagline {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.35rem;
+}
+
+/* Center section */
+.aria-enter-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+/* Logo */
+.aria-logo-mark {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aria-logo-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.aria-logo-circle {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.7;
+}
+
+.aria-logo-triangle {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.7;
+  stroke-linejoin: miter;
+}
+
+/* Wordmark */
+.aria-enter-wordmark {
+  text-align: center;
+  line-height: 1.3;
+}
+
+.aria-enter-title {
+  font-size: 1.9rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.aria-enter-official-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Symbol behind OFFICIAL */
+.aria-official-symbol {
+  position: absolute;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 1.7em;
+  border-radius: 999px;
+  border: 1px solid #000;
+  opacity: 0.13;
+}
+
+/* OFFICIAL text */
+.aria-enter-official {
+  position: relative;
+  padding: 0.2rem 0.9rem;
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+/* ENTER button */
+.aria-enter-button {
+  border: 1px solid #000;
+  background: transparent;
+  padding: 0.65rem 1.8rem 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.05rem;
+  border-radius: 999px;
+  outline: none;
+  transition:
+    transform 160ms ease-out,
+    box-shadow 160ms ease-out,
+    background 160ms ease-out,
+    color 160ms ease-out;
+}
+
+.aria-enter-infinity {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.aria-enter-label {
+  font-size: 0.7rem;
+}
+
+/* Footer */
+.aria-enter-footer {
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  margin-top: 1.5rem;
+}
+
+/* ========= ANIMATIONS ========= */
+
+/* Page fade-in */
+.aria-enter {
+  opacity: 0;
+  animation: aria-fade-in 700ms ease-out forwards;
+}
+
+@keyframes aria-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Infinity subtle pulse */
+.aria-enter-infinity {
+  animation: aria-infinity-pulse 2100ms ease-in-out infinite;
+}
+
+@keyframes aria-infinity-pulse {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-1px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+}
+
+/* Button hover */
+.aria-enter-button:hover {
+  background: #000;
+  color: #fff;
+  box-shadow: 0 0 0 1px #000 inset;
+  transform: translateY(-1px);
+}
+
+/* ========= INNER APP HEADER ========= */
+
+.aria-app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.75rem;
+  border-bottom: 1px solid #000;
+  background: #ffffff;
+}
+
+.aria-app-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.aria-app-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.aria-app-text {
+  line-height: 1.1;
+}
+
+.aria-app-title {
+  font-size: 1rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.aria-app-sub {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Nav */
+.aria-app-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.aria-nav-link {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.aria-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 160ms ease-out;
+}
+
+.aria-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Contract Info Card */
+.contract-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  backdrop-filter: blur(40px) saturate(150%);
+  -webkit-backdrop-filter: blur(40px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 2rem;
+  border-radius: 24px;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.37),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Frosted glass edge highlights */
+.contract-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent
+  );
+}
+
+.contract-title {
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contract-info {
+  margin-bottom: 1rem;
+}
+
+.contract-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.contract-value {
+  font-family: monospace;
+  font-size: 0.9rem;
+  word-break: break-all;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.2)
+  );
+  backdrop-filter: blur(10px);
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.95);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contract-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(138, 43, 226, 0.2));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  transition: all 300ms ease-out;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+}
+
+.contract-link:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(138, 43, 226, 0.3));
+  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.4);
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+.contract-link:hover {
+  transform: translateY(-2px);
+}
+
+/* AURX FreQ Section */
+.aurx-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.aurx-logo {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* KEYX Showcase Section */
+.keyx-showcase {
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(138, 43, 226, 0.05) 50%,
+    rgba(255, 215, 0, 0.05) 100%
+  );
+  backdrop-filter: blur(20px);
+  text-align: center;
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Frosted glass shimmer */
+.keyx-showcase::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  animation: shimmer 8s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+.showcase-title {
+  font-size: 2.5rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  font-weight: 900;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.keyx-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.keyx-logo-coin {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(255, 215, 0, 0.3));
+  transition: all 400ms ease;
+}
+
+.keyx-logo-coin:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 12px 32px rgba(255, 215, 0, 0.5));
+}
+
+/* 3D Spinning Animation */
+.keyx-spin {
+  animation: spin3d 4s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes spin3d {
+  from { 
+    transform: rotateY(0deg);
+  }
+  to { 
+    transform: rotateY(360deg);
+  }
+}
+
+.keyx-logo-gradient {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+  transition: transform 300ms ease;
+}
+
+.keyx-logo-gradient:hover {
+  transform: scale(1.05);
+}
+
+.keyx-logo-dark {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  transition: transform 300ms ease;
+}
+
+.keyx-logo-dark:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .aria-enter {
+    padding-inline: 1.25rem;
+  }
+
+  .aria-enter-title {
+    font-size: 1.45rem;
+    letter-spacing: 0.24em;
+  }
+
+  .aria-enter-official {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+  }
+
+  .aria-enter-tagline {
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+  }
+
+  .contract-card {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .aria-app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .aria-app-nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.75rem;
+    font-size: 0.65rem;
+  }
+}

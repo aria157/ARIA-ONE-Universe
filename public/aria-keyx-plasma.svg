@@ -1,0 +1,20 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="plasma" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#FFD1F9"/>
+      <stop offset="65%" stop-color="#A4FFEA"/>
+      <stop offset="100%" stop-color="#87F8A3"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="512" cy="512" r="470" fill="url(#plasma)" stroke="#fff" stroke-width="20"/>
+
+  <g fill="none" stroke="#000" stroke-width="38" stroke-linecap="round">
+    <path d="M512 270 L700 700 L324 700 Z"/>
+    <circle cx="512" cy="512" r="300" stroke-width="22"/>
+    <line x1="380" y1="520" x2="644" y2="520"/>
+    <line x1="450" y1="360" x2="512" y2="270"/>
+    <line x1="574" y1="360" x2="512" y2="270"/>
+  </g>
+</svg>

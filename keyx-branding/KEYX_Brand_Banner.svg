@@ -1,0 +1,5 @@
+<svg width="1600" height="400" xmlns="http://www.w3.org/2000/svg">
+<rect width="100%" height="100%" fill="black"/>
+<rect x="0" y="150" width="1600" height="100" fill="#ffee00"/>
+<text x="50%" y="230" font-size="80" fill="black" text-anchor="middle" font-family="Arial">KEYX • ARIA.ONE</text>
+</svg>

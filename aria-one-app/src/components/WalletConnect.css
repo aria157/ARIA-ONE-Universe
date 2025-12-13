@@ -1,0 +1,218 @@
+/* Wallet Connect Styles */
+
+.wallet-connect-container,
+.wallet-connected-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.wallet-connect-card,
+.wallet-connected-card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 500px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.wallet-connect-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #FFD700, #FFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wallet-connect-subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.wallet-error {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  color: #ff6b6b;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.wallet-connect-btn {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+  letter-spacing: 0.05em;
+}
+
+.wallet-connect-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(255, 215, 0, 0.6);
+}
+
+.wallet-connect-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.wallet-install-link {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.wallet-install-link:hover {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+/* Connected Wallet */
+.wallet-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.wallet-status {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 8px;
+}
+
+.wallet-status-dot {
+  width: 10px;
+  height: 10px;
+  background: #0f0;
+  border-radius: 50%;
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.wallet-status span {
+  color: #0f0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.wallet-address,
+.wallet-balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 8px;
+}
+
+.wallet-label {
+  color: #aaa;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.wallet-value {
+  color: #FFD700;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.wallet-balance .wallet-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.wallet-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.wallet-action-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: transparent;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+}
+
+.wallet-action-btn:hover {
+  background: rgba(255, 215, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.wallet-disconnect-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.wallet-disconnect-btn:hover {
+  background: rgba(255, 0, 0, 0.2);
+  border-color: #ff6b6b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wallet-connect-card,
+  .wallet-connected-card {
+    padding: 2rem;
+  }
+
+  .wallet-connect-title {
+    font-size: 1.5rem;
+  }
+
+  .wallet-connect-btn {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}

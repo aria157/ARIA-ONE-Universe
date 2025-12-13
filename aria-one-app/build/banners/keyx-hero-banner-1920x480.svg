@@ -1,0 +1,57 @@
+<svg width="1920" height="480" viewBox="0 0 1920 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="heroBg" cx="30%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#FFF700" opacity="0.2"/>
+      <stop offset="50%" stop-color="#62f7fe" opacity="0.15"/>
+      <stop offset="100%" stop-color="#050510"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFF700"/>
+      <stop offset="50%" stop-color="#62f7fe"/>
+      <stop offset="100%" stop-color="#ff8ed6"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1920" height="480" fill="url(#heroBg)"/>
+  
+  <!-- Animated pulse circles -->
+  <circle cx="300" cy="240" r="150" stroke="#FFF700" stroke-width="3" fill="none" opacity="0.3"/>
+  <circle cx="300" cy="240" r="200" stroke="#62f7fe" stroke-width="2" fill="none" opacity="0.2"/>
+  <circle cx="300" cy="240" r="250" stroke="#ff8ed6" stroke-width="1" fill="none" opacity="0.1"/>
+  
+  <!-- KeyX coin symbol -->
+  <circle cx="300" cy="240" r="120" fill="#050510" stroke="#FFF700" stroke-width="6"/>
+  <polygon points="300,180 360,300 240,300" fill="#FFF700" stroke="#fff" stroke-width="4"/>
+  <line x1="260" y1="270" x2="340" y2="270" stroke="#62f7fe" stroke-width="6"/>
+  
+  <!-- Main heading -->
+  <text x="500" y="200" fill="url(#textGrad)" font-size="96" font-family="Prometheus, Arial Black, sans-serif" font-weight="bold" letter-spacing="6">
+    ARIA KEYX
+  </text>
+  
+  <!-- Subheading -->
+  <text x="500" y="280" fill="#fff" font-size="48" font-family="Arial, sans-serif" opacity="0.9">
+    The Future of Digital Identity
+  </text>
+  
+  <!-- Tagline -->
+  <text x="500" y="340" fill="#62f7fe" font-size="32" font-family="Arial, sans-serif" opacity="0.8">
+    Verified • Secure • Powered by ARIA ONE Universe
+  </text>
+  
+  <!-- Stats/badges -->
+  <g transform="translate(500, 380)">
+    <rect width="160" height="60" rx="30" fill="#FFF700" opacity="0.9"/>
+    <text x="80" y="40" text-anchor="middle" fill="#050510" font-size="24" font-weight="bold">VERIFIED</text>
+  </g>
+  
+  <g transform="translate(680, 380)">
+    <rect width="160" height="60" rx="30" fill="#62f7fe" opacity="0.9"/>
+    <text x="80" y="40" text-anchor="middle" fill="#050510" font-size="24" font-weight="bold">SECURE</text>
+  </g>
+  
+  <g transform="translate(860, 380)">
+    <rect width="160" height="60" rx="30" fill="#ff8ed6" opacity="0.9"/>
+    <text x="80" y="40" text-anchor="middle" fill="#050510" font-size="24" font-weight="bold">WEB3</text>
+  </g>
+</svg>
